@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Award, UserCheck, Home, ArrowRight, Calendar, Phone } from "lucide-react";
 import Layout from "@/components/Layout";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import heroBg from "@/assets/hero-bg.jpg";
 import tratamentoDor from "@/assets/tratamento-dor.jpg";
 import pilatesIdosos from "@/assets/pilates-idosos.jpg";
