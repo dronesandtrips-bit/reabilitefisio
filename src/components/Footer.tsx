@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Facebook } from "lucide-react";
+import logoReabilite from "@/assets/logoreabilite.png";
 
 const WHATSAPP_LINK = "https://api.whatsapp.com/send?l=pt_BR&phone=5554991879915";
 
@@ -10,9 +11,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-heading font-bold text-background mb-4">
-              Reabilite <span className="text-primary">Fisio</span>
-            </h3>
+            <Link to="/">
+              <img
+                src={logoReabilite}
+                alt="Reabilite Fisio — Clínica de Fisioterapia e Pilates em Caxias do Sul"
+                className="h-[60px] w-auto brightness-0 invert mb-4"
+              />
+            </Link>
             <p className="text-background/70 leading-relaxed">
               Clínica focada no tratamento, reabilitação de movimentos e na prevenção de problemas do dia a dia.
             </p>

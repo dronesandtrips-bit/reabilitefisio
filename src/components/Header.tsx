@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import logoReabilite from "@/assets/logoreabilite.png";
 
 const WHATSAPP_LINK = "https://api.whatsapp.com/send?l=pt_BR&phone=5554991879915";
 
@@ -38,9 +39,11 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-full min-h-[4rem] md:min-h-[5rem]">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl md:text-3xl font-heading font-bold text-primary">
-            Reabilite <span className="text-foreground">Fisio</span>
-          </span>
+          <img
+            src={logoReabilite}
+            alt="Reabilite Fisio — Clínica de Fisioterapia e Pilates em Caxias do Sul"
+            className="h-10 md:h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}
