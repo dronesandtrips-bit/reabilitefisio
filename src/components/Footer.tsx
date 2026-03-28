@@ -15,7 +15,7 @@ const Footer = () => {
               <img
                 src={logoReabilite}
                 alt="Reabilite Fisio — Clínica de Fisioterapia e Pilates em Caxias do Sul"
-                className="h-[60px] w-auto brightness-0 invert mb-4"
+                className="h-[60px] w-auto mb-4"
               />
             </Link>
             <p className="text-background/70 leading-relaxed">
