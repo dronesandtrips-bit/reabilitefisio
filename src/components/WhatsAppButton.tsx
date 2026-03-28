@@ -1,13 +1,15 @@
+import { forwardRef } from "react";
 import { MessageCircle } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 
 const WHATSAPP_LINK = "https://api.whatsapp.com/send?l=pt_BR&phone=5554991879915";
 
-const WhatsAppButton = () => {
+const WhatsAppButton = forwardRef<HTMLAnchorElement>((_, ref) => {
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <a
+      ref={ref}
       href={WHATSAPP_LINK}
       target="_blank"
       rel="noopener noreferrer"
@@ -31,6 +33,8 @@ const WhatsAppButton = () => {
       </motion.div>
     </a>
   );
-};
+});
+
+WhatsAppButton.displayName = "WhatsAppButton";
 
 export default WhatsAppButton;
