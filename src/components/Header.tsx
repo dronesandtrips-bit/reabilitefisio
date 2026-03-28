@@ -42,7 +42,7 @@ const Header = () => {
           <img
             src={logoReabilite}
             alt="Reabilite Fisio — Clínica de Fisioterapia e Pilates em Caxias do Sul"
-            className="h-10 md:h-12 w-auto"
+            className="h-14 md:h-20 w-auto"
           />
         </Link>
 
