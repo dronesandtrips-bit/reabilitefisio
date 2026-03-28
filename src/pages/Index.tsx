@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { Award, UserCheck, Home, ArrowRight, Calendar, Phone } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import StaggerContainer, { staggerItemVariants } from "@/components/motion/StaggerContainer";
 import AnimatedCounter from "@/components/motion/AnimatedCounter";
@@ -46,10 +48,15 @@ const Index = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Reabilite Fisio — Fisioterapia e Pilates para Idosos em Caxias do Sul"
+        description="Clínica de fisioterapia em Caxias do Sul especializada em tratamento contra a dor e Pilates para idosos. Dry Needling, drenagem linfática e muito mais. Agende pelo WhatsApp: (54) 99187-9915."
+        canonical="https://reabilitefisio.lovable.app/"
+      />
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center" style={{ background: "var(--hero-gradient)" }}>
         <div className="absolute inset-0 overflow-hidden">
-          <img src={heroBg} alt="Clínica de fisioterapia" className="w-full h-full object-cover opacity-20" width={1920} height={1080} />
+          <img src={heroBg} alt="Clínica de Fisioterapia em Caxias do Sul — Tratamento Contra a Dor e Pilates para Idosos" className="w-full h-full object-cover opacity-20" width={1920} height={1080} />
         </div>
         <div className="container mx-auto px-4 relative z-10 py-20">
           <div className="max-w-3xl">
@@ -58,7 +65,7 @@ const Index = () => {
               transition={{ duration: 0.5, type: "spring", stiffness: 80, damping: 20 }}
               className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6"
             >
-              Viva sem limitações: Especialistas em Alívio da Dor e Pilates para a Melhor Idade
+              Fisioterapia e Pilates para Idosos em Caxias do Sul
             </motion.h1>
             <motion.p
               {...heroItem}
@@ -92,11 +99,11 @@ const Index = () => {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8 -mt-28 relative z-20" staggerDelay={0.2}>
             <motion.div variants={staggerItemVariants} whileHover={{ scale: 1.03, transition: { type: "spring", stiffness: 300 } }} className="bg-card rounded-xl shadow-xl overflow-hidden border-2 border-primary group hover:shadow-2xl transition-shadow">
               <div className="relative h-52 overflow-hidden">
-                <img src={tratamentoDor} alt="Tratamento da dor" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={800} height={600} />
+                <img src={tratamentoDor} alt="Fisioterapia em Caxias do Sul — Reabilite Fisio" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={800} height={600} />
                 <span className="absolute top-4 left-4 bg-primary text-primary-foreground text-xs font-heading font-bold px-3 py-1 rounded-full">Especialidade Principal</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-heading font-bold text-foreground mb-2">Tratamento Especializado contra a Dor</h3>
+                <h2 className="text-xl font-heading font-bold text-foreground mb-2">Especialistas em Tratamento Contra a Dor em Caxias do Sul</h2>
                 <p className="text-muted-foreground leading-relaxed">Recupere sua qualidade de vida com técnicas avançadas como Dry Needling e Fisioterapia Traumato-Ortopédica.</p>
                 <Button variant="link" asChild className="mt-3 p-0"><Link to="/tratamentos">Saiba mais <ArrowRight className="w-4 h-4" /></Link></Button>
               </div>
@@ -104,11 +111,11 @@ const Index = () => {
 
             <motion.div variants={staggerItemVariants} whileHover={{ scale: 1.03, transition: { type: "spring", stiffness: 300 } }} className="bg-card rounded-xl shadow-xl overflow-hidden border-2 group hover:shadow-2xl transition-shadow" style={{ borderColor: "hsl(125, 39%, 70%)" }}>
               <div className="relative h-52 overflow-hidden">
-                <img src={pilatesIdosos} alt="Pilates para idosos" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={800} height={600} />
+                <img src={pilatesIdosos} alt="Pilates para Idosos em Caxias do Sul — Reabilite Fisio" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width={800} height={600} />
                 <span className="absolute top-4 left-4 bg-secondary text-secondary-foreground text-xs font-heading font-bold px-3 py-1 rounded-full">Especialidade Principal</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-heading font-bold text-foreground mb-2">Pilates para Idosos</h3>
+                <h2 className="text-xl font-heading font-bold text-foreground mb-2">Pilates para Idosos em Caxias do Sul — Seguro e Supervisionado</h2>
                 <p className="text-muted-foreground leading-relaxed">Movimento seguro em cada fase da vida. Fortalecimento, equilíbrio e flexibilidade com supervisão fisioterápica.</p>
                 <Button variant="link" asChild className="mt-3 p-0"><Link to="/tratamentos">Saiba mais <ArrowRight className="w-4 h-4" /></Link></Button>
               </div>
@@ -164,7 +171,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-14">
-              Nossos Serviços
+              Todos os Nossos Tratamentos em Caxias do Sul
             </h2>
           </ScrollReveal>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -185,7 +192,7 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-14">Blog</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-14">Blog — Saúde e Fisioterapia</h2>
           </ScrollReveal>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {blogPosts.map((post, i) => (
@@ -206,6 +213,9 @@ const Index = () => {
           </StaggerContainer>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FAQSection />
 
       {/* Testimonials + CTA Banner */}
       <TestimonialsSection />

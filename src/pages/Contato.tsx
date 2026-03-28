@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -19,9 +20,14 @@ const Contato = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Contato | Reabilite Fisio — Fisioterapia em Caxias do Sul"
+        description="Entre em contato com a Reabilite Fisio. Rua Professora Viero, 571, Bairro Medianeira, Caxias do Sul - RS. WhatsApp: (54) 99187-9915."
+        canonical="https://reabilitefisio.lovable.app/contato"
+      />
       <section className="py-20" style={{ background: "var(--hero-gradient)" }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Contato</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Fale com a Reabilite Fisio em Caxias do Sul</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Entre em contato conosco. Estamos prontos para atender você!
           </p>
@@ -33,7 +39,7 @@ const Contato = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact info */}
             <div>
-              <h2 className="text-2xl font-heading font-bold text-foreground mb-8">Informações de Contato</h2>
+              <h2 className="text-2xl font-heading font-bold text-foreground mb-8">Nossa Localização — Bairro Medianeira, Caxias do Sul</h2>
 
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4">
@@ -94,7 +100,8 @@ const Contato = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localização Reabilite Fisio"
+                   title="Localização Reabilite Fisio — Caxias do Sul"
+                   aria-label="Mapa com a localização da Reabilite Fisio em Caxias do Sul"
                 />
               </div>
             </div>

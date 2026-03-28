@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 import tratamentoDor from "@/assets/tratamento-dor.jpg";
 import pilatesIdosos from "@/assets/pilates-idosos.jpg";
 import fisioGeriatrica from "@/assets/fisio-geriatrica.jpg";
@@ -111,10 +112,15 @@ const esteticaServices = [
 const Tratamentos = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Tratamentos | Fisioterapia, Pilates para Idosos e Estética — Caxias do Sul"
+        description="Conheça todos os tratamentos da Reabilite Fisio em Caxias do Sul: fisioterapia, pilates para idosos, dry needling, drenagem linfática, massagem e estética."
+        canonical="https://reabilitefisio.lovable.app/tratamentos"
+      />
       <section className="py-20" style={{ background: "var(--hero-gradient)" }}>
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">
-            Nossos Tratamentos
+            Tratamentos de Fisioterapia em Caxias do Sul
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Conheça todos os serviços oferecidos pela Reabilite Fisio. Tratamentos personalizados para cada necessidade.
