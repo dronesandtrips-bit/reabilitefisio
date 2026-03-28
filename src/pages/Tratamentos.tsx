@@ -136,7 +136,7 @@ const Tratamentos = () => {
                 <div className="relative">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} em Caxias do Sul — Reabilite Fisio`}
                     className={`rounded-xl shadow-xl border-4 ${service.borderColor} w-full`}
                     loading="lazy"
                     width={800}
@@ -148,7 +148,7 @@ const Tratamentos = () => {
                 </div>
               </div>
               <div className={idx % 2 === 1 ? "lg:[direction:ltr]" : ""}>
-                <h2 className="text-3xl font-heading font-bold text-foreground mb-4">{service.title}</h2>
+                <h2 className="text-3xl font-heading font-bold text-foreground mb-4">{service.title} em Caxias do Sul</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">{service.fullDesc}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
                   <div>
@@ -198,7 +198,7 @@ const Tratamentos = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherServices.map((service, i) => (
               <div key={i} className="bg-card rounded-xl shadow-md border overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
-                <img src={service.image} alt={service.title} className="w-full h-48 object-cover" loading="lazy" width={800} height={600} />
+                <img src={service.image} alt={`${service.title} em Caxias do Sul — Reabilite Fisio`} className="w-full h-48 object-cover" loading="lazy" width={800} height={600} />
                 <div className="p-6">
                   <h3 className="text-lg font-heading font-semibold text-foreground mb-2">{service.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">{service.desc}</p>
@@ -225,7 +225,7 @@ const Tratamentos = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="md:col-span-2">
-              <img src={estetica} alt="Estética e Bem-estar" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" width={800} height={600} />
+              <img src={estetica} alt="Estética e Bem-estar em Caxias do Sul — Reabilite Fisio" className="w-full h-64 object-cover rounded-xl shadow-lg" loading="lazy" width={800} height={600} />
             </div>
             {esteticaServices.map((service, i) => (
               <div key={i} className="bg-card rounded-xl p-6 shadow-md border hover:shadow-lg transition-shadow">
