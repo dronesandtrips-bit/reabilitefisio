@@ -220,6 +220,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials + CTA Banner */}
+      <TestimonialsSection />
+
       {/* CTA */}
       <section className="py-20" style={{ background: "var(--hero-gradient)" }}>
         <div className="container mx-auto px-4 text-center">
