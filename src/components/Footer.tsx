@@ -1,11 +1,12 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Facebook } from "lucide-react";
 
 const WHATSAPP_LINK = "https://api.whatsapp.com/send?l=pt_BR&phone=5554991879915";
 
-const Footer = () => {
+const Footer = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <footer className="bg-foreground text-background/90">
+    <footer ref={ref} className="bg-foreground text-background/90">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
@@ -59,6 +60,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;
