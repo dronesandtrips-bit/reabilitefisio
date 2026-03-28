@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
+import { motion, useReducedMotion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const WHATSAPP_LINK = "https://api.whatsapp.com/send?l=pt_BR&phone=5554991879915";
@@ -14,11 +15,28 @@ const navItems = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const prefersReducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b shadow-sm">
-      <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
+    <motion.header
+      animate={{
+        height: scrolled ? 56 : undefined,
+        backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
+      }}
+      transition={prefersReducedMotion ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 30 }}
+      className={`fixed top-0 left-0 right-0 z-50 border-b shadow-sm transition-colors ${
+        scrolled ? "bg-background/80" : "bg-background/95"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex items-center justify-between h-full min-h-[4rem] md:min-h-[5rem]">
         <Link to="/" className="flex items-center gap-2">
           <span className="text-2xl md:text-3xl font-heading font-bold text-primary">
             Reabilite <span className="text-foreground">Fisio</span>
@@ -57,31 +75,39 @@ const Header = () => {
       </div>
 
       {/* Mobile nav */}
-      {isOpen && (
-        <div className="md:hidden bg-background border-t shadow-lg">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`font-heading font-medium text-lg py-2 transition-colors hover:text-primary ${
-                  location.pathname === item.path ? "text-primary" : "text-foreground/80"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Button variant="whatsapp" asChild className="mt-2">
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                <Phone className="w-4 h-4" />
-                Agendar pelo WhatsApp
-              </a>
-            </Button>
-          </nav>
-        </div>
-      )}
-    </header>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 30 }}
+            className="md:hidden bg-background border-t shadow-lg overflow-hidden"
+          >
+            <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`font-heading font-medium text-lg py-2 transition-colors hover:text-primary ${
+                    location.pathname === item.path ? "text-primary" : "text-foreground/80"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Button variant="whatsapp" asChild className="mt-2">
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <Phone className="w-4 h-4" />
+                  Agendar pelo WhatsApp
+                </a>
+              </Button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 };
 
