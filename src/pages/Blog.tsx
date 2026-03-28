@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 
 const posts = [
   {
@@ -44,9 +45,14 @@ const posts = [
 const Blog = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Blog de Fisioterapia e Saúde — Reabilite Fisio Caxias do Sul"
+        description="Dicas de saúde, fisioterapia, pilates para idosos e bem-estar. Conteúdo especializado da Reabilite Fisio em Caxias do Sul - RS."
+        canonical="https://reabilitefisio.lovable.app/blog"
+      />
       <section className="py-20" style={{ background: "var(--hero-gradient)" }}>
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Blog</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Blog de Fisioterapia e Saúde</h1>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
             Dicas, novidades e informações sobre fisioterapia, pilates e bem-estar.
           </p>
