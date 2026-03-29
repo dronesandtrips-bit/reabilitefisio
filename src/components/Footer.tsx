@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram } from "lucide-react";
 import logoReabilite from "@/assets/logoreabilite.png";
 
 const WHATSAPP_LINK = "https://api.whatsapp.com/send?l=pt_BR&phone=5554991879915";
@@ -53,6 +53,10 @@ const Footer = () => {
               <a href="https://facebook.com/reabilitefisio" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5 text-primary shrink-0" />
                 Facebook
+              </a>
+              <a href="https://instagram.com/consultorio.reabilitefisio/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Instagram className="w-5 h-5 text-primary shrink-0" />
+                Instagram
               </a>
             </div>
           </div>
