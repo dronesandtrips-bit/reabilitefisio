@@ -54,6 +54,10 @@ const Footer = () => {
                 <Facebook className="w-5 h-5 text-primary shrink-0" />
                 Facebook
               </a>
+              <a href="https://instagram.com/consultorio.reabilitefisio/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Instagram className="w-5 h-5 text-primary shrink-0" />
+                Instagram
+              </a>
             </div>
           </div>
         </div>
