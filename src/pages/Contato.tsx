@@ -22,7 +22,7 @@ const Contato = () => {
     <Layout>
       <SEOHead
         title="Contato | Reabilite Fisio — Fisioterapia em Caxias do Sul"
-        description="Entre em contato com a Reabilite Fisio. Rua Professora Viero, 571, Bairro Medianeira, Caxias do Sul - RS. WhatsApp: (54) 99187-9915."
+        description="Entre em contato com a Reabilite Fisio. Herculles Galló, 515 sala 402 — Centro, Caxias do Sul - RS. WhatsApp: (54) 99187-9915."
         canonical="https://reabilitefisio.lovable.app/contato"
       />
       <section className="py-20" style={{ background: "var(--hero-gradient)" }}>
