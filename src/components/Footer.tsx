@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="flex flex-col gap-3 text-background/70">
               <div className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <span>Rua Professora Viero, 571 — Medianeira, Caxias do Sul - RS</span>
+                <span>Herculles Gallo, 515 sala 402 — Centro, Caxias do Sul - RS</span>
               </div>
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
