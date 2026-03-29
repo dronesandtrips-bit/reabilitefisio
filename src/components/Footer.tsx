@@ -50,7 +50,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 reabilitefisio@reabilitefisio.com
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="https://facebook.com/reabilitefisio" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5 text-primary shrink-0" />
                 Facebook
               </a>
