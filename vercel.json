@@ -1,0 +1,30 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+Isso instrui o Vercel a redirecionar todas as rotas para o `index.html`, permitindo que o React Router gerencie a navegação.
+
+---
+
+### Passo 2 — Verificar o domínio personalizado no Vercel
+
+Se você está tentando usar `reabilitefisio.com` como domínio personalizado:
+
+1. Acesse **vercel.com → seu projeto → Settings → Domains**
+2. Adicione o domínio `reabilitefisio.com`
+3. Configure os DNS no seu provedor de domínio apontando para o Vercel:
+```
+   Tipo: A
+   Nome: @
+   Valor: 76.76.21.21
+```
+```
+   Tipo: CNAME
+   Nome: www
+   Valor: cname.vercel-dns.com
